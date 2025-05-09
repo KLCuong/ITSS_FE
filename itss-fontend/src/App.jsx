@@ -1,35 +1,44 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Routes, Route } from 'react-router-dom';
+import { Layout } from 'antd';
+import ContactUs from './pages/ContactUs';
+import SignIn from './pages/SignIn';
+import SignUp from './pages/SignUp';
+import AboutUs from './pages/AboutUs';
+import AppHeader from './components/header';
+
+const { Content } = Layout;
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <Layout style={{ minHeight: '100vh' }}>
+      {/* <AppHeader /> */}
+      <AppHeader/>
+      <Content
+        style={{
+          padding: '0 50px',
+          flex: 1, 
+          overflow: 'auto',
+        }}
+      >
+        <div
+          style={{
+            background: '#fff',
+            padding: 24,
+            minHeight: '100%', 
+            boxSizing: 'border-box',
+          }}
+        >
+          <Routes>
+            <Route path="/aboutus" element={<AboutUs />} />
+            <Route path="/contactus" element={<ContactUs />} />
+            <Route path="/signin" element={<SignIn />} />
+            <Route path="/signup" element={<SignUp />} />
+            <Route path="/" element={<h1>Home Page</h1>} />
+          </Routes>
+        </div>
+      </Content>
+    </Layout>
+  );
 }
 
-export default App
+export default App;
