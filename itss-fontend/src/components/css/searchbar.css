@@ -1,0 +1,27 @@
+.search-bar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  width: 100%;
+  max-width: 100%;
+}
+
+.custom-search-bar {
+  border-radius: 50px; /* Bo góc lớn */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Bóng đổ */
+  border: none;
+  padding: 10px 20px;
+}
+
+/* Tùy chỉnh icon suffix */
+.custom-search-bar .ant-input-suffix {
+  margin-right: 10px;
+  font-size: 24px;
+}
+
+/* Tùy chỉnh khi focus */
+.custom-search-bar:focus-within {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1); /* Hiệu ứng nhẹ khi focus */
+}

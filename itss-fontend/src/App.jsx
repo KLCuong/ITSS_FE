@@ -5,17 +5,18 @@ import SignIn from './pages/SignIn';
 import SignUp from './pages/SignUp';
 import AboutUs from './pages/AboutUs';
 import AppHeader from './components/header';
+import Homepage from './pages/homepage/homepage';
 
 const { Content } = Layout;
 
 function App() {
   return (
-    <Layout style={{ minHeight: '100vh' }}>
+    <Layout style={{ minHeight: '100vh', background: '#f0f2f5' }}>
       {/* <AppHeader /> */}
       <AppHeader/>
       <Content
         style={{
-          padding: '0 50px',
+          // padding: '0 50px',
           flex: 1, 
           overflow: 'auto',
         }}
@@ -23,7 +24,7 @@ function App() {
         <div
           style={{
             background: '#fff',
-            padding: 24,
+            padding: 0,
             minHeight: '100%', 
             boxSizing: 'border-box',
           }}
@@ -33,7 +34,7 @@ function App() {
             <Route path="/contactus" element={<ContactUs />} />
             <Route path="/signin" element={<SignIn />} />
             <Route path="/signup" element={<SignUp />} />
-            <Route path="/" element={<h1>Home Page</h1>} />
+            <Route path="/" element={<Homepage/>} />
           </Routes>
         </div>
       </Content>

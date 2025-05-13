@@ -1,0 +1,74 @@
+.homepage-container {
+  min-height: 100vh; /* Đảm bảo phủ toàn màn hình */
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  background: url('../../assets/homepage_background.jpg');
+  opacity: 0.8;
+}
+.homepage-background {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  min-height: 100vh; /* Đảm bảo phủ toàn màn hình */
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+.homepage-text-container {
+  padding-top: 40px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+  top: 30px;
+}
+
+.homepage-centered-text {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ffffff; /* Màu trắng nổi bật */
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.5); /* Lớp phủ tối để chữ rõ hơn */
+  border-radius: 10px;
+}
+
+.homepage-category-container {
+  width: 100%; 
+  padding: 0 150px; 
+  box-sizing: border-box; 
+ 
+}
+
+.category-centered-text {
+  color: white; 
+  text-align: center; 
+  padding-top: 20px;
+  margin: 0; 
+  font-size: 2rem;
+  
+}
+
+.button-section {
+  display: flex;
+  justify-content: center; 
+  flex-wrap: wrap; 
+  gap: 8px; 
+  width: 100%;
+  padding: 20px;
+  margin: 0 auto; 
+}
+
+
+/* Thêm responsive design */
+@media (max-width: 768px) {
+  .homepage-centered-text {
+    font-size: 2rem;
+  }
+  
+  .button-section {
+    max-width: 100%;
+  }
+}
