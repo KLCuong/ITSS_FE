@@ -1,0 +1,19 @@
+.custom-button {
+  background-color: #991b1b; /* Màu đỏ đậm */
+  color: #ffffff; /* Chữ trắng */
+  border-radius: 9999px; /* Bo góc lớn */
+  padding: 4px 16px; /* Kích thước padding */
+  font-weight: bold; /* Chữ đậm */
+  border: none; /* Loại bỏ viền */
+  margin: 8px;
+}
+
+.custom-button:hover {
+  background-color: #7f1d1d; /* Màu đỏ nhạt hơn khi hover */
+  color: #ffffff;
+}
+
+.custom-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(153, 27, 27, 0.5); /* Hiệu ứng focus */
+}
