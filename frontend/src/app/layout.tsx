@@ -28,8 +28,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Flex justify="center" align="center" vertical className="py-60">
-          {children}
+        <Flex justify="center" align="center" vertical className="">
+          <div className="w-3/4 flex-col justify-self-center items-center">
+            {children}
+          </div>
         </Flex>
       </body>
     </html>
