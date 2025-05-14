@@ -14,7 +14,7 @@ const LoginForm: React.FC = () => {
   };
   return (
     <Form
-      form={form}
+      form={fom}
       name="login"
       onFinish={handleSubmit}
       className="p-16 rounded-md border shadow-xl"
