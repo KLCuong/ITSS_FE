@@ -6,6 +6,7 @@ import SignUp from './pages/SignUp';
 import AboutUs from './pages/AboutUs';
 import AppHeader from './components/header';
 import Homepage from './pages/homepage/homepage';
+import Admin from './pages/Admin/Admin';
 
 const { Content } = Layout;
 
@@ -35,6 +36,7 @@ function App() {
             <Route path="/signin" element={<SignIn />} />
             <Route path="/signup" element={<SignUp />} />
             <Route path="/" element={<Homepage/>} />
+            <Route path="/Admin" element={<Admin/>} />
           </Routes>
         </div>
       </Content>
