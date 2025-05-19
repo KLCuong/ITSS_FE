@@ -15,3 +15,5 @@ If you are developing a production application, we recommend using TypeScript wi
 npm install
 npm install antd
 npm install react-router-dom
+npm install react-pdf
+npm install pdfjs-dist

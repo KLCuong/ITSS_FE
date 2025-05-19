@@ -67,6 +67,11 @@
   padding-top: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+.white-section--small {
+  min-height: 30vh; 
+  padding-top: 10px;
+}
+
 .section-title-text {
   padding-left: 20px;
   font-size: 2.5rem; 

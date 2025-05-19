@@ -7,7 +7,7 @@ const { Option } = Select;
 
 const CustomSelectField = ({ title, placeholder, value, onChange, options }) => {
   return (
-    <div style={{ marginTop: 24 }}>
+    <div style={{ marginTop: 0 }}>
       <Title level={5}>{title}</Title>
       <Select
         placeholder={placeholder}

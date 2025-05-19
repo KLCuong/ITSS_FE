@@ -46,30 +46,34 @@ const SurveyDialog = ({ visible, onClose, onSave }) => {
           Để dễ dàng đưa ra tài liệu hợp với bạn hơn, hãy hoàn thành khảo sát này
           trước nha
         </Text>
+        <div style={{ marginTop: 20 }}>
+          <CustomSelectField
+            title="Bạn là sinh viên khóa bao nhiêu?"
+            placeholder="Mình là sinh viên khóa ....."
+            value={khoa}
+            onChange={(value) => setKhoa(value)}
+            options={[
+              { value: "K67", label: "K67" },
+              { value: "K68", label: "K68" },
+              { value: "K69", label: "K69" },
+            ]}
+          />
+        </div>
+        <div style={{ marginTop: 20 }}>
+          <CustomSelectField
+            title="Bạn là sinh viên ngành/khoa nào?"
+            placeholder="Mình là sinh viên thuộc viện ....."
+            value={nganh}
+            onChange={(value) => setNganh(value)}
+            options={[
+              { value: "CNTT", label: "Công Nghệ Thông Tin" },
+              { value: "Điện tử", label: "Điện tử" },
+              { value: "Kinh tế", label: "Kinh tế" },
+            ]}
+          />
+        </div>
 
-        <CustomSelectField
-          title="Bạn là sinh viên khóa bao nhiêu?"
-          placeholder="Mình là sinh viên khóa ....."
-          value={khoa}
-          onChange={(value) => setKhoa(value)}
-          options={[
-            { value: "K67", label: "K67" },
-            { value: "K68", label: "K68" },
-            { value: "K69", label: "K69" },
-          ]}
-        />
-
-        <CustomSelectField
-          title="Bạn là sinh viên ngành/khoa nào?"
-          placeholder="Mình là sinh viên thuộc viện ....."
-          value={nganh}
-          onChange={(value) => setNganh(value)}
-          options={[
-            { value: "CNTT", label: "Công Nghệ Thông Tin" },
-            { value: "Điện tử", label: "Điện tử" },
-            { value: "Kinh tế", label: "Kinh tế" },
-          ]}
-        />
+        
 
         <Button
           type="primary"

@@ -1,35 +1,27 @@
 import { Routes, Route } from 'react-router-dom';
-import { useState } from "react";
 import { Layout } from 'antd';
 import ContactUs from './pages/ContactUs';
-import SignIn from './pages/SignIn';
-import SignUp from './pages/SignUp';
+import SignIn from './pages/signin';
+import SignUp from './pages/signup';
 import AboutUs from './pages/AboutUs';
 import AppHeader from './components/header';
 import Homepage from './pages/homepage/homepage';
 import AppFooter from './components/footer';
 import SurveyDialog from "./components/survey_dialog"; // Đảm bảo bạn đã tạo component này
+import DocumentCard from './pages/doc_detail/docdetails';
+import SearchPage from './pages/search_result/search_result';
+
 
 const { Content } = Layout;
 
 function App() {
-  const [showDialog, setShowDialog] = useState(true); // 👈 Hiển thị dialog khi mở app
-
-  const handleSaveSurvey = (data) => {
-    console.log("Thông tin người dùng:", data);
-    setShowDialog(false); // Ẩn dialog sau khi lưu
-  };
+  
 
   return (
     <Layout style={{ minHeight: '100vh', background: '#f0f2f5' }}>
       <AppHeader />
       
-      {/* Hiển thị Dialog */}
-      <SurveyDialog
-        visible={showDialog}
-        onClose={() => setShowDialog(false)}
-        onSave={handleSaveSurvey}
-      />
+      
 
       <Content
         style={{
@@ -51,6 +43,8 @@ function App() {
             <Route path="/contactus" element={<ContactUs />} />
             <Route path="/signin" element={<SignIn />} />
             <Route path="/signup" element={<SignUp />} />
+            <Route path='/docdetail' element={<DocumentCard />} />
+            <Route path='/search' element={<SearchPage />} />
             <Route path="/" element={<Homepage />} />
           </Routes>
         </div>

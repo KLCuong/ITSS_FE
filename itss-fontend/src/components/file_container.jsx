@@ -16,6 +16,7 @@ const File_Container = ({ nganh, title, date, onClick }) => {
             marginLeft: "30px",
             marginRight: "auto",
             maxWidth: "1200px",
+            width: "100%",
             border: "1px solid #555454FF",
             borderRadius: "20px",
             boxSizing: "border-box"
