@@ -6,6 +6,7 @@ import SignUp from './pages/SignUp';
 import AboutUs from './pages/AboutUs';
 import AppHeader from './components/header';
 import Homepage from './pages/homepage/homepage';
+import AppFooter from './components/footer';
 
 const { Content } = Layout;
 
@@ -17,8 +18,9 @@ function App() {
       <Content
         style={{
           // padding: '0 50px',
-          flex: 1, 
+          flex: 1,
           overflow: 'auto',
+          marginBottom: '120px',
         }}
       >
         <div
@@ -38,6 +40,7 @@ function App() {
           </Routes>
         </div>
       </Content>
+      <AppFooter />
     </Layout>
   );
 }
