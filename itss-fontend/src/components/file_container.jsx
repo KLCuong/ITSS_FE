@@ -11,6 +11,7 @@ const File_Container = ({ nganh, title, date, onClick }) => {
             paddingTop: "16px",
             paddingBottom: "16px",
             paddingLeft: "30px",
+            paddingRight: "10px",
             marginBottom: "10px",
             marginLeft: "30px",
             marginRight: "auto",
@@ -19,7 +20,17 @@ const File_Container = ({ nganh, title, date, onClick }) => {
             borderRadius: "20px",
             boxSizing: "border-box"
         }}
-        onClick={onClick ? onClick : console.log(`${title} clicked`)} 
+        onClick={onClick ? onClick : () => console.log(`${title} clicked`)}
+        onMouseEnter={(e) => {
+            e.currentTarget.style.boxShadow = "0 8px 16px rgba(0,0,0,0.2)";
+            e.currentTarget.style.transform = "translateY(-5px)";
+        }}
+        onMouseLeave={(e) => {
+            e.currentTarget.style.boxShadow = "none";
+            e.currentTarget.style.transform = "translateY(0)";
+        }}
+        
+        
     >
       <Text
         strong
