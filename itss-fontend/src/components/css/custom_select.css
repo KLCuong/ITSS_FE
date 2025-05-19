@@ -1,0 +1,9 @@
+.ant-select-selector .ant-select-selection-placeholder {
+  color: black !important;
+  opacity: 1 !important; 
+  padding-left: 12px; 
+}
+
+.ant-select {
+  border-radius: 40px !important; 
+}

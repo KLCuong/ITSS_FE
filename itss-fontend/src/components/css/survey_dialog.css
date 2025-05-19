@@ -1,0 +1,17 @@
+/* Loại bỏ khoảng trắng viền trắng mặc định của Modal */
+.custom-modal .ant-modal-content {
+  padding: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+}
+
+/* Loại bỏ đổ bóng nếu có */
+.custom-modal .ant-modal {
+  padding: 0 !important;
+}
+
+/* Option: loại bỏ animation nếu cần */
+.custom-modal .ant-modal-content > .ant-modal-close {
+  display: none;
+}
