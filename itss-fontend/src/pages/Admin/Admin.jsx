@@ -1,15 +1,16 @@
 import React, { useState } from "react";
 
 const data = [
-  { name: "Google Pixel 7", type: "Điện thoại", price: "18,000,000 VNĐ", stock: 25 },
-  { name: "HP Spectre", type: "Laptop", price: "35,000,000 VNĐ", stock: 12 },
-  { name: "Anker PowerBank", type: "Phụ kiện", price: "1,200,000 VNĐ", stock: 200 },
-  { name: "LG OLED TV", type: "Tivi", price: "40,000,000 VNĐ", stock: 5 },
-  { name: "Huawei Mate 50", type: "Điện thoại", price: "20,000,000 VNĐ", stock: 35 },
-  { name: "Asus ROG", type: "Laptop", price: "45,000,000 VNĐ", stock: 8 },
-  { name: "Beats Studio", type: "Tai nghe", price: "5,000,000 VNĐ", stock: 90 },
-  { name: "Canon EOS R6", type: "Máy ảnh", price: "50,000,000 VNĐ", stock: 3 },
-  { name: "Nintendo Switch", type: "Game", price: "10,000,000 VNĐ", stock: 45 },
+  { name: "Giáo trình Vi sinh ký sinh trùng", type: "Vi sinh ký sinh", price: "VSKS101", stock: "Đại học Y Hà Nội" },
+  { name: "Tài liệu Hóa sinh đại cương", type: "Hóa sinh", price: "HS102", stock: "Đại học Y Hà Nội" },
+  { name: "Bài giảng Sinh học phân tử", type: "Sinh học", price: "SH103", stock: "Đại học Khoa học Tự nhiên" },
+  { name: "Giáo trình Hóa hữu cơ", type: "Hóa học", price: "HH104", stock: "Đại học Khoa học Tự nhiên" },
+  { name: "Tài liệu Kỹ thuật nuôi trồng", type: "Nông nghiệp", price: "NN105", stock: "Đại học Nông Lâm" },
+  { name: "Sách giáo khoa Vật lý đại cương", type: "Vật lý", price: "VL106", stock: "Đại học Bách Khoa" },
+  { name: "Tài liệu Lý thuyết thống kê", type: "Thống kê", price: "TK107", stock: "Đại học Kinh tế Quốc dân" },
+  { name: "Giáo trình Quản trị kinh doanh", type: "Quản trị kinh doanh", price: "QTKD108", stock: "Đại học Ngoại thương" },
+  { name: "Bài giảng Công nghệ thông tin", type: "Công nghệ thông tin", price: "CNTT109", stock: "Đại học Công nghệ" },
+  { name: "Tài liệu Tiếng Anh chuyên ngành", type: "Tiếng Anh", price: "TA110", stock: "Đại học Ngoại ngữ" }
 ];
 
 const Admin = () => {
@@ -39,9 +40,9 @@ const Admin = () => {
           <thead style={{ backgroundColor: '#e5e7eb' }}>
             <tr>
               <th style={{ padding: 12, border: '1px solid #ccc', width: '25%', textAlign: 'left' }}>Tên sản phẩm</th>
-              <th style={{ padding: 12, border: '1px solid #ccc', width: '16.66%', textAlign: 'left' }}>Loại</th>
-              <th style={{ padding: 12, border: '1px solid #ccc', width: '16.66%', textAlign: 'left' }}>Giá bán</th>
-              <th style={{ padding: 12, border: '1px solid #ccc', width: '16.66%', textAlign: 'left' }}>Kho hàng</th>
+              <th style={{ padding: 12, border: '1px solid #ccc', width: '16.66%', textAlign: 'left' }}>Môn học</th>
+              <th style={{ padding: 12, border: '1px solid #ccc', width: '16.66%', textAlign: 'left' }}>Mã môn học</th>
+              <th style={{ padding: 12, border: '1px solid #ccc', width: '16.66%', textAlign: 'left' }}>Trường</th>
               <th style={{ padding: 12, border: '1px solid #ccc', width: '16.66%', textAlign: 'center' }}>Thao tác</th>
             </tr>
           </thead>
