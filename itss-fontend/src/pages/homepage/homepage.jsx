@@ -75,11 +75,13 @@ const Homepage = () => {
 
 
       <div className="homepage-background">
+
         <div className="homepage-text-container">
           <h1 className="homepage-centered-text">
             Chào mừng bạn đến với trang web!
           </h1>
         </div>
+
 
         <SearchBar />
 
@@ -95,6 +97,7 @@ const Homepage = () => {
             ))}
           </div>
         </div>
+
 
         <div className={`white-section ${documentList.length <= 0 ? "white-section--small" : ""}`}>
           <h2 className="section-title-text">Tìm kiếm phổ biến</h2>
@@ -128,4 +131,6 @@ const Homepage = () => {
   );
 };
 
+
 export default Homepage;
+

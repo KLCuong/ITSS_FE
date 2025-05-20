@@ -11,7 +11,6 @@ import SurveyDialog from "./components/survey_dialog"; // Đảm bảo bạn đ�
 import DocumentCard from './pages/doc_detail/docdetails';
 import SearchPage from './pages/search_result/search_result';
 
-
 const { Content } = Layout;
 
 function App() {
@@ -43,8 +42,10 @@ function App() {
             <Route path="/contactus" element={<ContactUs />} />
             <Route path="/signin" element={<SignIn />} />
             <Route path="/signup" element={<SignUp />} />
+
             <Route path='/docdetail' element={<DocumentCard />} />
             <Route path='/search' element={<SearchPage />} />
+
             <Route path="/" element={<Homepage />} />
           </Routes>
         </div>

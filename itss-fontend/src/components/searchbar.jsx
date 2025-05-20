@@ -1,3 +1,4 @@
+const SearchBar = () => {
 import React, { useState } from 'react';
 import { Input } from 'antd';
 import { SearchOutlined } from '@ant-design/icons';
@@ -13,11 +14,11 @@ const SearchBar = () => {
       navigate(`/search?search=${encodeURIComponent(text.trim())}`);
     }
   };
-
   return (
     <div className="search-bar-container">
       <Input
         placeholder="Tìm kiếm..."
+
         value={text}
         onChange={(e) => setText(e.target.value)}
         onPressEnter={handleSearch}
@@ -35,10 +36,13 @@ const SearchBar = () => {
           fontWeight: 'bold',
           textAlign: 'center',
         }}
+
         className="custom-search-bar"
       />
     </div>
   );
 };
 
+
 export default SearchBar;
+

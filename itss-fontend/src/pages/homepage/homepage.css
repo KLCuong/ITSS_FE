@@ -1,4 +1,5 @@
 .homepage-container {
+  min-height: 100vh; /* Đảm bảo phủ toàn màn hình */
   display: flex;
   width: 100%;
   flex-direction: column;
@@ -10,7 +11,7 @@
   display: flex;
   width: 100%;
   flex-direction: column;
-  min-height: 100vh; 
+  min-height: 100vh; /* Đảm bảo phủ toàn màn hình */
   background-color: rgba(0, 0, 0, 0.5);
 }
 
@@ -94,9 +95,6 @@
 .document-list {
   margin-bottom: 40px;
 }
-
-
-
 /* Thêm responsive design */
 @media (max-width: 768px) {
   .homepage-centered-text {
