@@ -9,7 +9,6 @@ const SignIn = () => {
 
   return (
     <>
-      <h1>wtf</h1>
       <Form
         form={form}
         name="login"
