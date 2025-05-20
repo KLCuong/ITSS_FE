@@ -5,6 +5,7 @@ import SignIn from "./pages/signin";
 import SignUp from "./pages/signup";
 import AboutUs from "./pages/aboutus";
 import AppHeader from "./components/header";
+import Homepage from "./pages/homepage/homepage";
 
 const { Content } = Layout;
 
