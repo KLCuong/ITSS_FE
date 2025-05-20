@@ -3,6 +3,10 @@ import { Modal, Select, Typography, Button } from "antd";
 import { CloseOutlined } from "@ant-design/icons";
 import "./css/survey_dialog.css"; // Thêm file CSS riêng
 import CustomSelectField from "./custom_select";
+import vienlist from "../data/facilities"; 
+import departments from "../data/departments";
+import years from "../data/years";
+
 
 const { Title, Text } = Typography;
 const { Option } = Select;
@@ -10,11 +14,18 @@ const { Option } = Select;
 const SurveyDialog = ({ visible, onClose, onSave }) => {
   const [khoa, setKhoa] = useState("");
   const [nganh, setNganh] = useState("");
+  const [vien, setVien] = useState("");
+  const [selectedDepartments, setSelectedDepartments] = useState([]);
+
+
 
   return (
     <Modal
       open={visible}
-      onCancel={onClose}
+      onCancel={() => {
+        onSave(null); // Gọi API với data = null
+        onClose();    // Sau đó đóng dialog
+      }}
       footer={null}
       closable={false}
       centered
@@ -48,31 +59,43 @@ const SurveyDialog = ({ visible, onClose, onSave }) => {
         </Text>
         <div style={{ marginTop: 20 }}>
           <CustomSelectField
-            title="Bạn là sinh viên khóa bao nhiêu?"
-            placeholder="Mình là sinh viên khóa ....."
-            value={khoa}
-            onChange={(value) => setKhoa(value)}
-            options={[
-              { value: "K67", label: "K67" },
-              { value: "K68", label: "K68" },
-              { value: "K69", label: "K69" },
-            ]}
+            title="Bạn là sinh viên viện nào?"
+            placeholder="Mình là sinh viên thuộc viện ....."
+            value={vien}
+            onChange={(value) => {
+              setVien(value);
+              setSelectedDepartments(departments[value] || []);
+              setNganh(""); // reset ngành khi đổi viện
+            }}
+            options={vienlist.map((item) => ({
+              value: item.value,
+              label: item.label,
+            }))}
           />
         </div>
         <div style={{ marginTop: 20 }}>
           <CustomSelectField
             title="Bạn là sinh viên ngành/khoa nào?"
-            placeholder="Mình là sinh viên thuộc viện ....."
+            placeholder="Mình là sinh viên ngành ....."
             value={nganh}
             onChange={(value) => setNganh(value)}
-            options={[
-              { value: "CNTT", label: "Công Nghệ Thông Tin" },
-              { value: "Điện tử", label: "Điện tử" },
-              { value: "Kinh tế", label: "Kinh tế" },
-            ]}
+            options={selectedDepartments || []}
           />
         </div>
-
+        <div style={{ marginTop: 20 }}>
+          <CustomSelectField
+            title="Bạn là sinh viên khóa bao nhiêu?"
+            placeholder="Mình là sinh viên khóa ....."
+            value={khoa}
+            onChange={(value) => setKhoa(value)}
+            options={years.map((item) => ({
+              value: item.value,
+              label: item.label,
+            }))}
+          />
+        </div>
+        
+        
         
 
         <Button
@@ -84,7 +107,10 @@ const SurveyDialog = ({ visible, onClose, onSave }) => {
             backgroundColor: "#f5222d",
             fontWeight: "bold",
           }}
-          onClick={() => onSave({ khoa, nganh })}
+          onClick={() => {
+            onSave({ khoa, nganh, vien });
+            
+            }}
         >
           Lưu thông tin
         </Button>

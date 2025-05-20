@@ -17,3 +17,4 @@ npm install antd
 npm install react-router-dom
 npm install react-pdf
 npm install pdfjs-dist
+npm install axios
