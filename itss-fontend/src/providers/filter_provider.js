@@ -1,5 +1,7 @@
 import axios from 'axios';
 
+
+const HttpConfigs = "https://itssbackend.up.railway.app/"
 const filterDocuments = async ({ year_id, department_id, course_id }) => {
   try {
     console.log('Đang lọc tài liệu với các thông số:', {
@@ -7,7 +9,7 @@ const filterDocuments = async ({ year_id, department_id, course_id }) => {
       department_id,
       course_id
     });
-    const response = await axios.get('http://localhost:3000/api/user/documents/filter', {
+    const response = await axios.get(HttpConfigs + 'api/user/documents/filter', {
       params: {
         year_id,
         department_id,
@@ -27,7 +29,7 @@ const searchDocuments = async (keyword = '') => {
   try {
     console.log('Đang tìm kiếm với từ khóa:', keyword);
 
-    const response = await axios.get('http://localhost:3000/api/user/documents/search', {
+    const response = await axios.get(HttpConfigs + 'api/user/documents/search', {
       params: {
         keyword
       }
